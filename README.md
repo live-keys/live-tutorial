@@ -4,3 +4,10 @@ This plugin is a template for a LiveCV plugin. You can use this as a starting po
 
 ## Linking to Live CV from source
 
+Clone the dev branch from livecv in the dependencies directory:
+
+```
+git clone -b dev git@github.com:livecv/livecv.git dependencies/livecv
+```
+
+And build using the main livetutorial.pro file.
