@@ -1,4 +1,5 @@
 import QtQuick 2.3
+import live 1.0
 import lcvcore 1.0
 import lcvimgproc 1.0
 import tutorial 1.0

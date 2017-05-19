@@ -13,16 +13,20 @@
 
 TEMPLATE = subdirs
 
-SUBDIRS += \
-    dependencies \
-    plugins
+SUBDIRS += plugins
 
 # --- Subdir configurations ---
-dependencies.subdir = $$PWD/dependencies
 plugins.subdir      = $$PWD/plugins
 
+
+!isEmpty(BUILD_DEPENDENCIES){
+    SUBDIRS += dependencies
+
+    dependencies.subdir = $$PWD/dependencies
+    plugins.depends = dependencies
+}
+
 # --- Dependency configuration ---
-plugins.depends = dependencies
 
 
 # Include the global configuration files since otherwise they would never show
