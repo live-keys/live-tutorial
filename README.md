@@ -11,3 +11,6 @@ git clone -b dev git@github.com:livecv/livecv.git dependencies/livecv
 ```
 
 And build using the main livetutorial.pro file.
+
+Please note that the plugin is configured to be will be build into the build directory of Live CV 
+so it can be used as soon as it's build.
