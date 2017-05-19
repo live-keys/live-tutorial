@@ -7,7 +7,7 @@ This plugin is a template for a LiveCV plugin. You can use this as a starting po
 Clone the dev branch from livecv in the dependencies directory:
 
 ```
-git clone -b dev git@github.com:livecv/livecv.git dependencies/livecv
+git clone -b dev https://github.com/livecv/livecv.git dependencies/livecv
 ```
 
 And build using the main livetutorial.pro file.
