@@ -35,4 +35,4 @@ OTHER_FILES += \
     .qmake.conf \
 
 OTHER_FILES += \
-    $$LIVECV_DEV_DIR/project/*.pri
+    $$LIVECV_DEV_PATH/project/*.pri
