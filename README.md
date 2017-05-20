@@ -34,8 +34,8 @@ qmake -r ..
 make (or nmake)
 ```
 
-Then Live CV will be build in *build/dependencies/livecv*, and the plugin in
-*build/depdendencies/livecv/plugins/tutorial*
+Then Live CV will be build in *build/dependencies/livecv/bin*, and the plugin in
+*build/depdendencies/livecv/bin/plugins/tutorial*
 
 ### 2. Compiling with a Live CV manual build
 
@@ -114,20 +114,19 @@ PLUGIN_NAME = tutorial
 PLUGIN_PATH = $$PWD
 ```
 
-Then include *plugin.pri* from Live CV to handle a lot of boiler plate:
+Then include *plugin.pri* from Live CV to handle a lot of boilerplate code:
 
 ```
 include($$LIVECV_DEV_PATH/project/plugin.pri)
 ```
 
-We link to the plugins we are dependent on, in this case ```lcvcore``` and ```live```:
+We link to the plugins we are dependent on, in this case ```lcvcore``` and ```live```.
+This will solve include paths and link the plugin libraries to our plugin.
 
 ```
 linkPlugin(live,    live)
 linkPlugin(lcvcore, lcvcore)
 ```
-
-This will solve include paths and link the plugin libraries to our plugin.
 
 And finally we include our source and opencv configuration:
 
