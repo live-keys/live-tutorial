@@ -1,6 +1,6 @@
 # Live CV Plugin Tutorial
 
-This plugin is a template for a Live CV plugin. You can use this as a starting point for developing Live CV plugins.
+You can use this as a starting point for developing Live CV plugins.
 
  * **Version**: 1.0.0
  * **Requires**:
@@ -26,7 +26,7 @@ git clone -b dev https://github.com/livecv/livecv.git dependencies/livecv
 Use the *livetutorial.pro* to build.
 
 Please note that the plugin is configured to be deployed into the build directory of Live
-CV so it can be used as soon as it's build. If you compile manually:
+CV so it can be located as soon as it's build. If you compile manually:
 
 ```
 cd build
@@ -134,4 +134,4 @@ And finally we include our source and opencv configuration:
 include($$LIVECV_DEV_PATH/3rdparty/opencvconfig.pro)
 ```
 
-Our *qmldir* file will be deployed automatically (handled in *plugins.pri*).
+The *qmldir* file together with any other *\*.qml* files in the *qml* dir be deployed automatically (handled in *plugins.pri*).
