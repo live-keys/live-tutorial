@@ -2,6 +2,9 @@
 
 You can use this as a starting point for developing Live CV plugins.
 
+[![Build Status](https://travis-ci.org/livecv/live-tutorial.svg?branch=master)](https://travis-ci.org/livecv/live-tutorial)
+[![Build status](https://ci.appveyor.com/api/projects/status/vulwe88gk6as99qf/branch/master?svg=true)](https://ci.appveyor.com/project/dinusv/live-tutorial/branch/master)
+
  * **Version**: 1.0.0
  * **Requires**:
     * **Live CV**: 1.4 or higher
