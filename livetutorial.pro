@@ -19,7 +19,7 @@ SUBDIRS += plugins
 plugins.subdir      = $$PWD/plugins
 
 
-!isEmpty(BUILD_DEPENDENCIES){
+!isEmpty(BUILD_DEPENDENCIES):equals($$BUILD_DEPENDENCIES, true){
     SUBDIRS += dependencies
 
     dependencies.subdir = $$PWD/dependencies
