@@ -12,27 +12,23 @@
 # --- Project structure ---
 
 TEMPLATE = subdirs
+SUBDIRS += tutorial
 
-SUBDIRS += plugins
+## --- Subdir configurations ---
+tutorial.subdir = tutorial
 
-# --- Subdir configurations ---
-plugins.subdir      = $$PWD/plugins
-
-
-!isEmpty(BUILD_DEPENDENCIES):equals($$BUILD_DEPENDENCIES, true){
-    SUBDIRS += dependencies
-
-    dependencies.subdir = $$PWD/dependencies
-    plugins.depends = dependencies
+exists($$PWD/livecv){
+    SUBDIRS += livecv
+    livecv.subdir = $$PWD/livecv
+    tutorial.depends = livecv
 }
 
 # --- Dependency configuration ---
 
-
 # Include the global configuration files since otherwise they would never show
 # up in your project
 OTHER_FILES += \
-    .qmake.conf \
+    .qmake.conf
 
 OTHER_FILES += \
     $$LIVECV_DEV_PATH/project/*.pri

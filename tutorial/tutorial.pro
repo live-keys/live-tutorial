@@ -1,10 +1,10 @@
 PLUGIN_NAME = tutorial
-PLUGIN_PATH = $$PWD
+PLUGIN_PATH = tutorial
 
 ## PLUGIN_NAME and PLUGIN_PATH must be set up prior to including this config file
 include($$LIVECV_DEV_PATH/project/plugin.pri)
 
-uri = plugins.tutorial
+uri = tutorial
 
 DEFINES += Q_LCV
 
@@ -13,12 +13,14 @@ DEFINES += Q_LCV
 linkPlugin(live,    live)
 linkPlugin(lcvcore, lcvcore)
 
-## Deploying qml is handled by the is_plugin configuration
+message($$LIBS)
+
+## Deploying qml is handled by the plugin.pri configuration
 
 ## Source
 
 include($$PWD/src/tutorial.pri)
-include($$LIVECV_DEV_PATH/3rdparty/opencvconfig.pro)
+include($$LIVECV_DEV_PATH/project/3rdparty/opencv.pri)
 
 OTHER_FILES *= \
     qml/*.qml \
