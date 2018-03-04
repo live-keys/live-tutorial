@@ -1,11 +1,11 @@
 {
     "version" : "1.0.0",
-    "name": "live.tutorial",
+    "name": "tutorial",
     "webpage": "http://livecv.dinusv.com",
     "dependencies" : [
         {
             "name": "livecv",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "repository": "https://github.com/livecv/livecv.git"
         }
     ],
@@ -27,14 +27,11 @@
             ],
             "deploy" : [
                 { "copy" : {
-                    "{release}/bin" : {
-                        "plugins" : {
-                            "tutorial": "plugins/tutorial"
-                        }
-                    },
-                    "{source}/samples/tutorial" : "samples/tutorial"
-                  }
-                }
+                    "{release}/bin/tutorial/qmldir" : "-",
+                    "{release}/bin/tutorial/*.dll" : "-",
+                    "{release}/bin/tutorial/*.qml" : "-",
+                    "{source}/samples" : "-"
+                }}
             ]
         },
         "msvc2013_64" : {
@@ -50,14 +47,12 @@
             ],
             "deploy" : [
                 { "copy" : {
-                    "{release}/bin" : {
-                        "plugins" : {
-                            "tutorial": "plugins/tutorial"
-                        }
-                    },
-                    "{source}/samples/tutorial" : "samples/tutorial"
-                  }
-                }
+                    "{release}/bin/tutorial/qmldir" : "-",
+                    "{release}/bin/tutorial/*.dll" : "-",
+                    "{release}/bin/tutorial/*.qml" : "-",
+                    "{release}/bin/tutorial/dev/*.lib" : "dev/-",
+                    "{source}/samples" : "-"
+                }}
             ]
         }
     }

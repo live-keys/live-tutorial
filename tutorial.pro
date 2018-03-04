@@ -17,7 +17,7 @@ SUBDIRS += tutorial
 ## --- Subdir configurations ---
 tutorial.subdir = tutorial
 
-exists($$PWD/livecv){
+exists($$PWD/livecv):equals(BUILD_DEPENDENCIES, true){
     SUBDIRS += livecv
     livecv.subdir = $$PWD/livecv
     tutorial.depends = livecv
@@ -28,7 +28,5 @@ exists($$PWD/livecv){
 # Include the global configuration files since otherwise they would never show
 # up in your project
 OTHER_FILES += \
-    .qmake.conf
-
-OTHER_FILES += \
+    .qmake.conf \
     $$LIVECV_DEV_PATH/project/*.pri

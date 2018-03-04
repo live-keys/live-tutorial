@@ -13,8 +13,6 @@ DEFINES += Q_LCV
 linkPlugin(live,    live)
 linkPlugin(lcvcore, lcvcore)
 
-message($$LIBS)
-
 ## Deploying qml is handled by the plugin.pri configuration
 
 ## Source
