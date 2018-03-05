@@ -28,7 +28,7 @@
             "deploy" : [
                 { "copy" : {
                     "{release}/bin/tutorial/qmldir" : "-",
-                    "{release}/bin/tutorial/*.dll" : "-",
+                    "{release}/bin/tutorial/*.so" : "-",
                     "{release}/bin/tutorial/*.qml" : "-",
                     "{source}/samples" : "-"
                 }}
@@ -54,6 +54,24 @@
                     "{source}/samples" : "-"
                 }}
             ]
-        }
+        },
+        "macos_clang_64" : {
+            "compiler" : "clang_64",
+            "environment" : {
+                "OPENCV_DIR" : "opencv_dir",
+                "QTDIR" : "qtdir"
+            },
+            "build" : [
+                {"qmake" : ["-recursive"]},
+                {"make" : []}
+            ],
+            "deploy" : [
+                { "copy" : {
+                    "{release}/bin/tutorial/qmldir" : "-",
+                    "{release}/bin/tutorial/*.dylib" : "-",
+                    "{release}/bin/tutorial/*.qml" : "-",
+                    "{source}/samples" : "-"
+                }}
+            ]
     }
 }
